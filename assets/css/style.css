@@ -1,0 +1,91 @@
+/* Estilos generales del cuerpo para usar la fuente Roboto */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* Gradiente suave de fondo */
+    color: #343a40; /* Color de texto oscuro */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Estilo para el título de la sección */
+#Eventos-Anteriores h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Negrita */
+    color: #0056b3; /* Un azul ligeramente más oscuro que el primario de Bootstrap para el título */
+    margin-bottom: 2.5rem; /* Espacio debajo del título */
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase; /* Convertir a mayúsculas para más impacto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Línea decorativa debajo del título */
+#Eventos-Anteriores h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Ancho de la línea un poco más larga */
+    height: 5px; /* Grosor de la línea */
+    background-color: #007bff; /* Color de la línea, el azul primario */
+    margin: 15px auto 0; /* Centrar y separar del texto */
+    border-radius: 3px; /* Esquinas ligeramente más redondeadas */
+}
+
+/* Estilos para las tarjetas de eventos */
+#Eventos-Anteriores .card {
+    border: none; /* Eliminar el borde predeterminado */
+    border-radius: 18px; /* Bordes un poco más redondeados */
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transición con una curva más elegante */
+    cursor: pointer; /* Indica que la tarjeta es interactiva */
+    position: relative; /* Necesario para la superposición */
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+#Eventos-Anteriores .card:hover {
+    transform: translateY(-8px); /* Eleva la tarjeta un poco más */
+    box-shadow: 0 1.2rem 4rem rgba(0,0,0,.2)!important; /* Sombra más pronunciada y oscura */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+#Eventos-Anteriores .card-img-top {
+    height: 220px; /* Altura un poco mayor para las imágenes */
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    filter: brightness(0.9); /* Ligeramente más oscura la imagen */
+    transition: filter 0.3s ease-in-out;
+}
+
+#Eventos-Anteriores .card:hover .card-img-top {
+    filter: brightness(1); /* La imagen se ilumina al pasar el ratón */
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+#Eventos-Anteriores .card-body {
+    padding: 1.8rem 1.5rem; /* Espaciado interno generoso */
+    background-color: #ffffff;
+    border-bottom-left-radius: 18px; /* Bordes inferiores redondeados */
+    border-bottom-right-radius: 18px;
+}
+
+/* Estilo para los títulos de las tarjetas */
+#Eventos-Anteriores .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem; /* Tamaño de fuente un poco más grande */
+    color: #212529; /* Un gris más oscuro para los títulos de las tarjetas */
+    margin-bottom: 0.75rem; /* Más espacio debajo del título de la tarjeta */
+}
+
+/* Espaciado de la sección completa */
+#Eventos-Anteriores {
+    background-color: #f8f9fa; /* Un fondo ligeramente diferente para la sección para destacarla */
+    padding-top: 6rem; /* Más padding arriba */
+    padding-bottom: 6rem; /* Más padding abajo */
+}
+
+/* Media query para hacer el texto más grande en pantallas muy grandes si es necesario */
+@media (min-width: 1200px) {
+    #Eventos-Anteriores .card-title {
+        font-size: 1.5rem;
+    }
+}
